@@ -87,6 +87,14 @@ button {
 	
 	<p>Az önéletrajzomat <a href="file:///C:/Users/%C3%81gnes/Documents/%C3%81gi/webfejleszt%C3%A9s/CV_Ferenczi_Agnes_magyar.pdf" target="_blank">itt tudod letölteni</a></p><br>
 	
+	<form action="/my-handling-form-page" method="post">
+		<fieldset>
+			<legend>Nem találsz valamit?</legend>
+			<label for="search">Keresés</label>
+			<input type="search" id="search" name="user_search">
+		</fieldset>
+	</form>
+	
 	<h1>Tartalom </h1>
 	<ul>
 	<li><a href="#Életrajz">Életrajz</a></li>
@@ -178,11 +186,12 @@ button {
 			title="Ezzel a linkkel elérheted a Magyar Nemzeti Galéria honlapját">
 	<figcaption>Bortnyik Sándor, Zöld Szamár, 1924, Budapest, Magyar Nemzeti Galéria</figcaption>
 	</figure>
+	
 	<video src="rabbit320.mp4" controls
 		width="400" height="200"
 		poster="hatterkep.jpg">
 		<track kind="subtitles" src="rabbit320.vtt" srclang="hu">
-		<p>Ha nem indulna el a videó <a href="rabbit320.mp4"kattints ide </a> </p>
+		<p>Ha nem indulna el a videó <a href="rabbit320.mp4">kattints ide</a> </p>
 	</video>
 	
 	<br>
@@ -194,23 +203,90 @@ button {
 	<br>
 	<br>
 	
-<form action="/my-handling-form-page" method="post">
-	<fieldset>
-		<legend>Küldj üzenetet</legend>
-		<label for="name">Név:<abbr title="required">*</label>
-		<input type="text" id="name" name="user_name">
-		<label for="mail">E-mail:<abbr title="required">*</label>
-		<input type="email" id="mail" name="user_mail">
-		<label for="msg">Message:</label>
-		<textarea id="msg" name="user_message"></textarea>
-		<label for="taste-1">Hírlevél feliratkozás</form>
-		<input type="checkbox" id="taste-1" name="user_taste-1">
-		<div class="button">
-			<button type="submit">Küld el az üzeneted</button>
-</fieldset>
-</form>
+	<form action="/my-handling-form-page" method="post">
+		<fieldset>
+			<legend>Küldj üzenetet</legend>
+			
+			<label for="name">Név:<abbr title="required">*</label>
+			<input type="text" id="name" name="user_name">
+			
+			<label for="mail">E-mail:<abbr title="required">*</label>
+			<input type="email" id="mail" name="user_mail">
+			
+			<label for="tel">Telefon:</label>
+			<input type="tel" id="tel" name="user_tel">
+			
+			<label for="url">Weboldal:</label>
+			<input type="url" id="url" name="user_url">
+			
+			<label for="number">Életkor</label>
+			<input type="number" id="number" name="user_number" max="3">
+			
+			<label for="file">File kiválasztása</label>
+			<input type="file" id="file" name="user_file" accept="pdf/*" multiple>
+			
+			<label for="msg">Üzenet:</label>
+			<textarea type="text" id="msg" name="user_message" rows="5" cols="7"></textarea>
+			
+			<label for="taste-1">Hírlevél feliratkozás</form>
+			<input type="checkbox" id="taste-1" name="user_taste-1">
+			
+			<div class="button">
+				<button type="submit">Küld el az üzeneted</button>
+		</fieldset>
+		<fieldset>
+			<legend> Kérdések </legend>
+			<label for="simple">Mi volt az első munkahelyem?</label>
+			<select id="simple" name="user_simple">
+				<option>Mall.hu</option>
+				<option>H&M</option>
+				<option selected>OTP Mobil</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<label for="multi">Mely bankokban dolgoztam eddig?</legend>
+			<select multiple id="multi" name="user_multi">
+					<option>Erste Bank</option>
+					<option>CIB Bank</option>
+					<option>OTP Bank</option>
+					<option>Budapest Bank</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<p>Melyik munkahelyen töltöttem el a legtöbb időt?</p>
+			<ul>
+			<li>
+				<label for="porkolt">Magyar Nemzeti Galéria</label>
+				<input type="radio" checked id="porkolt" name="user_étel">
+			</li>
+			<li>
+				<label for="csirke">Kassák Múzeum</label>
+				<input type="radio" checked id="csirke" name="user_csirke">
+			</li>
+			<li>
+				<label for="fozelek">OTP Mobil</label>
+				<input type="radio" checked id="fozelek" name="user_fozelek">
+			</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<label for="range">Hány évet töltöttem el az Egyetemen?</label>
+			<input type="range" id="range" name="user_range" min="2" max="6,5" step="1">
+		</fieldset>
+		<fieldset>
+			<label for="2019.01.14.">Mikor államvizsgáztam?</label>
+			<input type="datetime-local" id="2019.01.04." name="user_datetime">
+		</fieldset>
+		<fieldset>
+			<label for="color">Melyik a kedvenc színem?</label>
+			<input type="color" id="color" name="user_color">
+		</fieldset>
+		<fieldset>
+			<button type="submit"></button>
+			<input type="image" alt="submit" src="btn-ldr.gif"/>
+		</fieldset>
+	</form>
 
-	
 	<p>Emailt <a href="mailto:agn.ferenczi@gmail.com?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">erre a címre</a> tudod küldeni </p>
   </body>
 </html>
