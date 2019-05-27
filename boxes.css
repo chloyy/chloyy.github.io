@@ -1,0 +1,35 @@
+/* General styles */
+body {
+  margin: 0;
+}
+
+#wrapper * {
+  padding: 20px;
+  font-size: 20px;
+  border: 20px solid rgba(0,0,0,0.5);
+}
+
+/* specific boxes */
+
+#wrapper header, #wrapper footer {
+  background-color: blue;
+  color: white;
+}
+
+#wrapper main {
+  background-color: yellow;
+  margin: 5%;
+  margin-top:-50px;
+  padding: 5%;
+  border-width: 40px;
+  width: 400px 
+  width: 60%
+}
+
+#wrapper header {
+
+}
+
+#wrapper footer {
+  margin-top: 15px;
+}

@@ -208,13 +208,13 @@ button {
 			<legend>Küldj üzenetet</legend>
 			
 			<label for="name">Név:<abbr title="required">*</label>
-			<input type="text" id="name" name="user_name">
+			<input type="text" id="name" name="user_name" required>
 			
 			<label for="mail">E-mail:<abbr title="required">*</label>
-			<input type="email" id="mail" name="user_mail">
+			<input type="email" id="mail" name="user_mail" required pattern="a@b">
 			
 			<label for="tel">Telefon:</label>
-			<input type="tel" id="tel" name="user_tel">
+			<input type="tel" id="tel" name="user_tel" min="5" max="10">
 			
 			<label for="url">Weboldal:</label>
 			<input type="url" id="url" name="user_url">
